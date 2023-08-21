@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+    <div class="dashboard">
+        <!-- Include the sidebar -->
+        <input type="checkbox" id="sidebar-checkbox">
+        <nav class="sidebar">
+            <label for="sidebar-checkbox" class="show-hide-sidebar">
+                <i class="bi bi-menu-button"></i>
+            </label>
+            <div class="logo">
+                <h2>Admin Dashboard</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Dashboard</a></li>
+                <li><a href="../users/users.html">Users</a></li>
+                <li><a href="../products/products.html">Products</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <h1>Edit Setting</h1>
+            <form action="edit_setting.php" method="POST">
+                <input type="hidden" name="setting_id" value="1">
+                <label for="name">Name:</label>
+                <input type="text" name="name" value="Setting Name" required>
+                <label for="value">Value:</label>
+                <input type="text" name="value" value="Setting Value" required>
+                <button type="submit">Save Changes</button>
+            </form>
+        </main>
+    </div>
+</body>
+
+</html>
